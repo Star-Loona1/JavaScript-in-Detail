@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Handling Errors In JavaScript</h2>
+    <p id="the_mistake"></p>
+    <p id="result"></p>
+
+    <script>
+        try{
+            function LetsAdd(x,y){
+                if(x === undefined){
+                    x = 4;
+                }
+                if(y === undefined){
+                    y = 2;
+                }
+            }
+         document.write(x - y);    
+        }
+        catch(err){
+            document.getElementById("the_mistake").innerHTML = err.message;
+        }
+    </script>
+</body>
+</html>
